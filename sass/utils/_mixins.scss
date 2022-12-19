@@ -1,0 +1,42 @@
+@mixin mq($type) {
+    $phone: 480px;
+    $table: 768px;
+    $descktop: 1200px;
+
+    @if $type =='phone' {
+            @media screen and (max-width: #{$table - 0.02}) {
+                @content;
+            }
+        }
+
+    @if $type == 'phone-table' {
+        @media screen and (max-width: #{$descktop - 0.02}) {
+            @content;
+        }
+    }
+    
+    @if $type == 'phone-table-descktop' {
+        @media screen and (min-width: $phone) {
+            @content;
+        }
+    }
+
+    @if $type =='table' {
+        @media screen and (min-width: $table) and (max-width: #{$descktop - 0.02}) {
+            @content;
+        }
+    }
+
+    @if $type == 'table-desktop' {
+        @media screen and (min-width: $table) {
+            @content;
+        }
+    }
+
+    @if $type == 'desktop' {
+        @media screen and (min-width: $descktop) {
+            @content
+        }
+    }
+}
+

@@ -1,0 +1,41 @@
+.container {
+    max-width: 480px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(table) {
+        max-width: 768px;
+    }
+
+    @include mq(desktop) {
+        max-width: 1200px;
+    }
+}
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include mq(desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+
+
+
+
+
+
+// .container {
+//     width: 1200px;
+//     padding: 0 15px;
+//     margin: 0 auto;
+// }
+
+// .section {
+//     padding-top: 94px;
+//     padding-bottom: 94px;
+// }

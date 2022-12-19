@@ -1,0 +1,87 @@
+.hero {   
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-color: $hide-background-color;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+             rgba(47, 48, 58, 0.4)),
+        url("../images/hero-480.jpg");
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)), url("../images/hero-480@2x.jpg");
+        }
+    }
+
+@include mq(table) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url("../images/hero-768.jpg");
+        max-width: 768px;
+    }
+}
+
+@media (min-device-pixel-ratio: 2) and (min-width: 768px),
+(min-resolution: 192dpi) and (min-width: 768px),
+(min-resolution: 2dppx) and (min-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url("../images/hero-768@2x.jpg");
+    }
+}
+
+@include mq(desktop) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url("../images/hero-1600.jpg");
+                max-width: 1600px;
+                padding-top: 200px;
+                padding-bottom: 200px;
+    } 
+}
+
+@media (min-device-pixel-ratio: 2) and (min-width: 1200px),
+(min-resolution: 192dpi) and (min-width: 1200px),
+(min-resolution: 2dppx) and (min-width: 1200px) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url("../images/hero-1600@2x.jpg");
+    }
+}
+
+.hero__tittle {
+    font-size: 26px;
+    line-height: calc(42 / 26);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $secondary-accent-color;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include mq(desktop) {
+        width: 696px;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: calc(60 / 44);
+    
+    
+        margin-bottom: 35px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+.hero__button {
+    margin-left: auto;
+    margin-right: auto;
+}
